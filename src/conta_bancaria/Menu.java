@@ -3,6 +3,7 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
+import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -16,7 +17,7 @@ public class Menu {
 			
 			/* Instanciar Objetos da Classe Conta*/
 			
-			Conta c1 = new Conta(1, 123, 1, "Darth Vader", 200000.00f);
+			/*Conta c1 = new Conta(1, 123, 1, "Darth Vader", 200000.00f);
 			c1.visualizar();
 			Conta c2 = new Conta(1, 123, 2, "Peter Parker", 100000.00f);
 			c2.visualizar();
@@ -35,10 +36,24 @@ public class Menu {
 			c2.depositar(50000.00f);
 			c2.visualizar();
 			
+			/* Instanciar objetos da Classe ContaCorrente*/
+			
+			ContaCorrente cc1 = new ContaCorrente(3, 789, 1, "Luke", 200000.00f, 2000.00f);
+			cc1.visualizar();
+			
+			System.out.println("\nSacar R$ 203.000,00 da conta Cc1: " + (cc1.sacar(203000.00f) ? 
+					"Saque efetuado com Sucesso! | Saldo: " + cc1.getSaldo() : "Saldo Insuficiente | Saldo: " + cc1.getSaldo()));
+			
+			System.out.println("\nSacar R$ 202.000,00 da conta Cc1: " + (cc1.sacar(202000.00f) ? 
+					"Saque efetuado com Sucesso! | Saldo: " + cc1.getSaldo() : "Saldo Insuficiente | Saldo: " + cc1.getSaldo()));
+			
+			cc1.depositar(1000.00f);
+			cc1.visualizar();
 			
 			do {
 				
 				System.out.println(Cores.TEXT_RED + Cores.ANSI_BLACK_BACKGROUND);
+				System.out.println("*****************************************************");
 				System.out.println("                                                     ");
 				System.out.println("                     APPLE BANK                      ");
 				System.out.println("                                                     ");
