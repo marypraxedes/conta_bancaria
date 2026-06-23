@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
 import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -17,7 +18,7 @@ public class Menu {
 			
 			/* Instanciar Objetos da Classe Conta*/
 			
-			/*Conta c1 = new Conta(1, 123, 1, "Darth Vader", 200000.00f);
+			Conta c1 = new Conta(1, 123, 1, "Darth Vader", 200000.00f);
 			c1.visualizar();
 			Conta c2 = new Conta(1, 123, 2, "Peter Parker", 100000.00f);
 			c2.visualizar();
@@ -49,6 +50,16 @@ public class Menu {
 			
 			cc1.depositar(1000.00f);
 			cc1.visualizar();
+			
+			/* Instanciar objetos da Classe ContaPoupanca*/
+			
+			ContaPoupanca cp1 = new ContaPoupanca(4, 780, 2, "Bruce Wayne", 1000000.00f, 05);
+			cp1.visualizar();
+			
+			System.out.println("\nO aniversário da sua conta é dia: " + cp1.getAniversario());
+			
+			
+			
 			
 			do {
 				
